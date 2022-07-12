@@ -84,8 +84,6 @@ func (p *CommitmentProof) Calculate() (CommitmentRoot, error) {
 	case *CommitmentProof_Compressed:
 		proof := Decompress(p)
 		return proof.Calculate()
-	default:
-		return nil, errors.New("unrecognized proof type")
 	}
 	return nil, errors.New("unrecognized proof type")
 }
