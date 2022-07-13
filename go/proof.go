@@ -241,7 +241,7 @@ func IsLeftMost(spec *InnerSpec, path []*InnerOp) bool {
 	return true
 }
 
-// IsRightMost returns true if this is the left-most path in the tree, excluding placeholder (empty child) nodes
+// IsRightMost returns true if this is the right-most path in the tree, excluding placeholder (empty child) nodes
 func IsRightMost(spec *InnerSpec, path []*InnerOp) bool {
 	last := len(spec.ChildOrder) - 1
 	minPrefix, maxPrefix, suffix := getPadding(spec, int32(last))
